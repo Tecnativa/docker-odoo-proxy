@@ -24,17 +24,30 @@ configuration file.
 
 ### Available environment variables
 
-#### `$ODOO`
+#### `$FORCEHOST`
 
-Defines where the Odoo backend is listening (default: `odoo:8069`).
+Defines a host that must be forced. For instance, if your instance resides on
+`www.example.com`, `example.com`, `www.example.org` and `example.org` but you
+want users to get redirected to `www.example.com` no matter where they came
+from, you should set `www.example.com` in this variable (default: empty).
+
+#### `$FORWARDFOR`
+
+Defines if the proxy should add the `X-Forwarded-*` headers to the request
+(default: `1` (yes)). If you disable it, **it must be because those are already
+added by another proxy before this one**.
 
 #### `$LONGPOLLING`
 
 Defines where Odoo's longpolling port is listening (default: `odoo:8072`).
 
+#### `$ODOO`
+
+Defines where the Odoo backend is listening (default: `odoo:8069`).
+
 ## Useful notes
 
-If you use this, you should enable Odoo's [proxy mode][].
+If you use this container, it means you should enable Odoo's [proxy mode][].
 
 If you need SSL, then this is not for you. Better go for
 [`haproxy-letsencrypt`][], which includes an Odoo mode.

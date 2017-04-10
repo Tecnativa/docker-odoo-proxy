@@ -3,7 +3,10 @@ MAINTAINER Tecnativa <info@tecnativa.com>
 
 COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 EXPOSE 80
-ENV ODOO=odoo:8069 LONGPOLLING=odoo:8072
+ENV FORCEHOST="" \
+    FORWARDFOR=1 \
+    LONGPOLLING=odoo:8072 \
+    ODOO=odoo:8069
 
 # Metadata
 ARG VCS_REF
