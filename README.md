@@ -59,7 +59,7 @@ Please send any feedback (issues, questions) to the [issue tracker][].
 [Alpine]: https://alpinelinux.org/
 [HAProxy]: http://www.haproxy.org/
 [`haproxy-letsencrypt`]: https://hub.docker.com/r/tecnativa/haproxy-letsencrypt/
-[issue tracker]: https://github.com/Tecnativa/docker-tcp-proxy/issues
+[issue tracker]: https://github.com/Tecnativa/docker-odoo-proxy/issues
 [Odoo]: https://www.odoo.com/
 [proxy mode]: https://www.odoo.com/documentation/10.0/reference/cmdline.html#cmdoption-odoo.py--proxy-mode
 [worker mode]: https://www.odoo.com/documentation/10.0/setup/deploy.html#worker-number-calculation
